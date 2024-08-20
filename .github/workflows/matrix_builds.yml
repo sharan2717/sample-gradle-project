@@ -1,0 +1,31 @@
+name: Matrix builds
+
+on:
+  push:
+    branches:
+      - branch1
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        jdk: [11, 17] 
+        architecture: [x64, arm64] 
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK ${{ matrix.jdk }} for ${{ matrix.architecture }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.jdk }}
+          distribution: 'temurin'
+          architecture: ${{ matrix.architecture }}
+
+      - name: Build Gradle
+        run: gradle build
+
+      - name: Run Tests
+        run: gradle test
