@@ -18,7 +18,9 @@ jobs:
           distribution: 'temurin'
           architecture: x64
           cache: gradle
-          cache-dependency-path: /gradle/wrapper
+          cache-dependency-path:
+             sub-project/*.gradle*
+             sub-project/**/gradle-wrapper.properties
     - name: Build Gradle
       run: gradle build
   test:
