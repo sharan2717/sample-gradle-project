@@ -38,6 +38,8 @@ jobs:
           runs-on: ubuntu-latest
           name: Building Docker Image  
           needs: build 
+          environment:
+            name: sample_env
           steps:
            -
             name: Login to Docker Hub
