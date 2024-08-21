@@ -3,7 +3,7 @@ name: Matrix builds
 on:
   push:
     branches:
-      - branch1
+      - main
 
 jobs:
   build-and-test:

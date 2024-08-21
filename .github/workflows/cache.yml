@@ -2,7 +2,7 @@ name: Gradle Dependency Cache
 on:
   push:
      branches:
-        branch1
+        - main
 
 
 jobs:

@@ -2,7 +2,7 @@ name: Sample workflow for parallel jobs
 on:
   push:
      branches:
-        branch1
+       - branch1
 
 jobs:
   build:
