@@ -1,5 +1,6 @@
-FROM openjdk:11-jdk-alphine
+FROM anapsix/alpine-java
 
+FROM baseImage
 WORKDIR /app
 
 COPY build/libs/app.jar /app/app.jar
