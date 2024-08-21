@@ -1,0 +1,13 @@
+name: Docker Build
+on:
+  push:
+    branches:
+      - branch1
+
+jobs:
+  Build:
+     runs-on: ubuntu-latest
+     name: Building Gradle
+     steps:
+       -name: Checkout Code
+        uses: actions/checkout@v3  
