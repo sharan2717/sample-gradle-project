@@ -1,4 +1,4 @@
-name: Gradle Dependency Gradle
+name: Gradle Dependency Cache
 on:
   push:
      branches:
