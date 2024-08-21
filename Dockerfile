@@ -1,6 +1,5 @@
-FROM anapsix/alpine-java
+FROM  anapsix/alpine-java
 
-FROM baseImage
 WORKDIR /app
 
 COPY build/libs/app.jar /app/app.jar
